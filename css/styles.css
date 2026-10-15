@@ -1,12 +1,72 @@
 /* ============================
+   Colors (dark = original look, light = Light mode)
+   Change a color once here and it updates everywhere.
+============================ */
+:root,
+:root[data-theme="dark"] {
+  --page-bg: #000;
+  --text: #fff;
+  --text-muted: #ccc;
+  --heading: #ffffff;
+  --header-bg: #333;
+  --header-border: #555;
+  --nav-bg: #222;
+  --nav-active: #777;
+  --nav-hover: #555;
+  --line: #444;
+  --frame: #888;
+  --panel: #0a0a0a;
+  --panel-border: #1a1a1a;
+  --gold: #d6b75a;              /* SkeletalGrowth gold */
+  --purple: #b78dfc;            /* SkeletalGrowth purple */
+  --on-gold: #000;
+  --gold-glow: rgba(214, 183, 90, 0.15);
+  --gold-glow-strong: rgba(214, 183, 90, 0.25);
+  --viewer-bg: #111;
+}
+
+:root[data-theme="light"] {
+  --page-bg: #fafaf7;
+  --text: #1b1b1b;
+  --text-muted: #4a4a4a;
+  --heading: #111;
+  --header-bg: #e8e6e0;
+  --header-border: #c9c6bd;
+  --nav-bg: #f0eee8;
+  --nav-active: #d4d0c5;
+  --nav-hover: #e0ddd4;
+  --line: #d2cec4;
+  --frame: #a19d93;
+  --panel: #ffffff;
+  --panel-border: #e2dfd7;
+  --gold: #8a6d1d;              /* darker gold so text passes contrast on white */
+  --purple: #6a3fb8;
+  --on-gold: #000;
+  --gold-glow: rgba(138, 109, 29, 0.18);
+  --gold-glow-strong: rgba(138, 109, 29, 0.28);
+  --viewer-bg: #f0efeb;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --page-bg: #fafaf7; --text: #1b1b1b; --text-muted: #4a4a4a; --heading: #111;
+    --header-bg: #e8e6e0; --header-border: #c9c6bd; --nav-bg: #f0eee8; --nav-active: #d4d0c5;
+    --nav-hover: #e0ddd4; --line: #d2cec4; --frame: #a19d93; --panel: #ffffff; --panel-border: #e2dfd7;
+    --gold: #8a6d1d; --purple: #6a3fb8; --gold-glow: rgba(138,109,29,0.18);
+    --gold-glow-strong: rgba(138,109,29,0.28); --viewer-bg: #f0efeb; color-scheme: light;
+  }
+}
+
+/* ============================
    Global Styles
 ============================ */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--page-bg);
+  color: var(--text);
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
@@ -15,10 +75,10 @@ body, html {
    Header
 ============================ */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--header-bg);
+  color: var(--text);
   padding: 10px 20px;
-  border-bottom: 2px solid #555;
+  border-bottom: 2px solid var(--header-border);
 }
 
 /* Title + logo side by side */
@@ -38,7 +98,7 @@ header {
 .title h2 {
   margin: 0;
   font-size: 1em;
-  color: #ccc;
+  color: var(--text-muted);
   font-weight: normal;
 }
 
@@ -73,9 +133,9 @@ header {
   flex-shrink: 0;
   height: calc(100vh - 80px);
   overflow-y: auto;
-  background-color: #222;
+  background-color: var(--nav-bg);
   padding: 15px;
-  border-right: 2px solid #444;
+  border-right: 2px solid var(--line);
   box-sizing: border-box;
 }
 
@@ -93,7 +153,7 @@ header {
 .navigation a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: var(--text);
   font-weight: bold;
   font-size: 15px;
   padding: 6px 10px;
@@ -104,7 +164,7 @@ header {
 
 .navigation a:hover,
 .navigation a.active {
-  background-color: #777;
+  background-color: var(--nav-active);
 }
 
 /* ----- Submenu Styles ----- */
@@ -112,11 +172,13 @@ header {
   display: none;                /* hidden by default */
   margin-left: 10px;
   margin-top: 5px;
-  border-left: 2px solid #444;
+  border-left: 2px solid var(--line);
   padding-left: 10px;
 }
 
-.navigation li:hover > ul.submenu {
+.navigation li:hover > ul.submenu,
+.navigation li:focus-within > ul.submenu,
+.navigation li.open > ul.submenu {
   display: block;               /* show on hover */
 }
 
@@ -124,12 +186,12 @@ header {
   font-weight: normal;
   font-size: 14px;
   padding: 4px 10px;
-  color: #ccc;
+  color: var(--text-muted);
 }
 
 .navigation ul.submenu a:hover {
-  background-color: #555;
-  color: #fff;
+  background-color: var(--nav-hover);
+  color: var(--text);
 }
 
 /* ----- Main Content Area ----- */
@@ -139,7 +201,7 @@ header {
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
-  background-color: #000;
+  background-color: var(--page-bg);
 }
 
 /* ============================
@@ -172,12 +234,13 @@ header {
 }
 
 .media img,
-.media iframe {
+.media iframe,
+.media .viewer {
   width: 100%;
   aspect-ratio: 4 / 3;
   height: auto;
   border-radius: 6px;
-  border: 1px solid #888;
+  border: 1px solid var(--frame);
   display: block;
   flex-shrink: 0;         /* prevents flex compression */
   object-fit: contain;
@@ -186,7 +249,7 @@ header {
 .media figcaption {
   text-align: center;
   font-size: 0.9em;
-  color: #ccc;
+  color: var(--text-muted);
   margin-top: 0.5em;
 }
 
@@ -199,7 +262,7 @@ header {
   .navigation {
     width: 100%;
     border-right: none;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid var(--line);
   }
 
   .text, .media {
@@ -211,25 +274,25 @@ header {
 Callout Section
 ============================ */
 .callout-section {
-  background-color: #0a0a0a;              /* slightly lighter black for contrast */
-  border: 1px solid #d6b75a;              /* SkeletalGrowth gold */
+  background-color: var(--panel);              /* slightly lighter black for contrast */
+  border: 1px solid var(--gold);              /* SkeletalGrowth gold */
   border-radius: 10px;
   padding: 2rem;
   margin-top: 3rem;
   text-align: center;
-  box-shadow: 0 0 12px rgba(214, 183, 90, 0.15);
+  box-shadow: 0 0 12px var(--gold-glow);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .callout-section:hover {
-  box-shadow: 0 0 18px rgba(214, 183, 90, 0.25);
+  box-shadow: 0 0 18px var(--gold-glow-strong);
   transform: translateY(-2px);
 }
 
 /* Heading */
 .callout-section h2 {
   font-family: 'Playfair Display', serif; /* elegant & authoritative */
-  color: #ffffff;
+  color: var(--heading);
   font-size: 1.8rem;
   margin-bottom: 0.6rem;
   letter-spacing: 0.3px;
@@ -238,7 +301,7 @@ Callout Section
 /* Subheading */
 .callout-section p {
   font-family: 'Lato', sans-serif;       /* modern and readable */
-  color: #ccc;
+  color: var(--text-muted);
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -246,7 +309,7 @@ Callout Section
 /* Link */
 .callout-link {
   font-family: 'Lato', sans-serif;
-  color: #d6b75a;
+  color: var(--gold);
   font-weight: 600;
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -254,24 +317,24 @@ Callout Section
 }
 
 .callout-link:hover {
-  color: #b78dfc;                        /* SkeletalGrowth purple accent */
-  border-color: #b78dfc;
+  color: var(--purple);                        /* SkeletalGrowth purple accent */
+  border-color: var(--purple);
 }
 
 .accent-style {
   display: flex;
   align-items: flex-start;
-  background: #0a0a0a;
+  background: var(--panel);
   margin: 3rem 0;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #1a1a1a;
+  border: 1px solid var(--panel-border);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .accent-style .accent-bar {
   width: 8px;
-  background: linear-gradient(to bottom, #d6b75a, #b78dfc);
+  background: linear-gradient(to bottom, var(--gold), var(--purple));
 }
 
 .accent-style .content {
@@ -281,19 +344,19 @@ Callout Section
 
 .accent-style h2 {
   font-family: 'Playfair Display', serif;
-  color: #ffffff;
+  color: var(--heading);
   font-size: 1.6rem;
   margin-bottom: 0.4rem;
 }
 
 .accent-style p {
   font-family: 'Lato', sans-serif;
-  color: #cccccc;
+  color: var(--text-muted);
   margin-bottom: 0.8rem;
 }
 
 .accent-style .callout-link {
-  color: #d6b75a;
+  color: var(--gold);
   font-family: 'Lato', sans-serif;
   font-weight: 600;
   text-decoration: none;
@@ -302,18 +365,18 @@ Callout Section
 }
 
 .accent-style .callout-link:hover {
-  color: #b78dfc;
-  border-color: #b78dfc;
+  color: var(--purple);
+  border-color: var(--purple);
 }
 
 .callout-goldbanner {
   position: relative;
-  background-color: #0a0a0a;
+  background-color: var(--panel);
   border-radius: 10px;
   padding: 2rem 2rem 2rem 3rem;   /* extra left padding to match offset border */
   margin: 1rem 0;
   text-align: left;
-  box-shadow: 0 0 10px rgba(214, 183, 90, 0.15);
+  box-shadow: 0 0 10px var(--gold-glow);
 }
 
 /* Gold border offset to the right */
@@ -324,7 +387,7 @@ Callout Section
   left: 1.5rem;                   /* horizontal offset */
   right: 0;
   bottom: 0;
-  border: 2px solid #d6b75a;
+  border: 2px solid var(--gold);
   border-radius: 10px;
   pointer-events: none;
 }
@@ -332,8 +395,8 @@ Callout Section
 /* Gold banner heading with rounded lower corners */
 .callout-goldbanner h2 {
   display: inline-block;
-  background-color: #d6b75a;
-  color: #000;
+  background-color: var(--gold-banner, var(--gold));
+  color: var(--on-gold);
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 700;
@@ -355,7 +418,7 @@ Callout Section
 }
 
 .callout-goldbanner p {
-  color: #ccc;
+  color: var(--text-muted);
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   margin-top: 0.2rem;
@@ -363,7 +426,7 @@ Callout Section
 }
 
 .callout-goldbanner .callout-link {
-  color: #b78dfc;
+  color: var(--purple);
   font-family: 'Lato', sans-serif;
   font-weight: 600;
   text-decoration: none;
@@ -372,8 +435,8 @@ Callout Section
 }
 
 .callout-goldbanner .callout-link:hover {
-  color: #d6b75a;
-  border-color: #d6b75a;
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 /* ============================
@@ -385,4 +448,77 @@ a {
 
 header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+:root[data-theme="light"] header { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); }
+:root[data-theme="light"] { --gold-banner: #d6b75a; }
+
+/* ============================
+   3D viewers (Voyager) — same frame as the old Sketchfab iframes
+============================ */
+.viewer { background: var(--viewer-bg); position: relative; overflow: hidden; }
+.viewer voyager-explorer { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.model-table .viewer { border: 1px solid var(--frame); border-radius: 6px; max-width: 100%; }
+.viewer-missing { padding: 1em; border: 1px dashed var(--frame); color: var(--text-muted); }
+
+/* ============================
+   Light / Dark switch (sits under the menu)
+============================ */
+.theme-switch-wrap { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+.theme-switch {
+  font: inherit;
+  font-size: 14px;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.theme-switch:hover { background-color: var(--nav-hover); color: var(--text); }
+
+/* ============================
+   Accessibility helpers
+============================ */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--gold-banner, var(--gold)); color: #000; padding: 8px 14px; border-radius: 0 0 6px 0;
+}
+.skip-link:focus { left: 0; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.site-error {
+  margin: 20px; padding: 16px; border: 1px solid var(--gold); border-radius: 8px;
+  background: var(--panel); color: var(--text); font-family: Arial, sans-serif; line-height: 1.5;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* ============================
+   Phones & tablets (only below 800px, so the desktop look is unchanged)
+============================ */
+@media (max-width: 800px) {
+  .navigation {
+    position: static;
+    height: auto;
+    max-width: none;
+    min-width: 0;
+    overflow-y: visible;
+  }
+  .navigation a { white-space: normal; padding: 10px 10px; }   /* bigger tap targets */
+  .component-content { flex-direction: column; flex-wrap: wrap; }
+  .component-content > .text,
+  .component-content > .media { flex: 1 1 auto; width: 100%; }
+  figure.media { margin: 0; }
+  .main-content { overflow-x: hidden; }
+  .model-table, .model-table tbody, .model-table tr, .model-table td { display: block; width: 100%; }
+  .model-table iframe, .model-table .viewer { width: 100% !important; height: auto !important; aspect-ratio: 5 / 3; }
+  .logo img { max-height: 48px; }
+  .callout-goldbanner { padding: 2rem 1rem 1.5rem 2rem; }
+  .callout-goldbanner::before { left: 0.75rem; }
+  .callout-goldbanner h2 { left: -2rem; font-size: 1.35rem; }
+}
+@media (max-width: 800px) and (hover: none) {
+  .navigation li.has-submenu > a::after { content: " \25BE"; font-weight: normal; }
 }

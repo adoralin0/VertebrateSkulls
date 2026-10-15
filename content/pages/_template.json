@@ -1,0 +1,49 @@
+{
+  "_help": "Copy this file to make a new page, e.g. pages/cebus.json, then open page.html?page=cebus (or add cebus.html). Delete sections you don't need.",
+  "header": "standard",
+  "menuHighlight": "Primates",
+  "fonts": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Lato:wght@400;600&display=swap",
+  "heading": "<i>Genus species</i>",
+  "sections": [
+    {
+      "type": "text-and-media",
+      "mediaSide": "right",
+      "title": "Section title",
+      "paragraphs": [
+        "First paragraph.",
+        "Second paragraph. Use <i>italics</i> for species names."
+      ],
+      "image": "images/your-photo.jpg",
+      "description": "What the photo shows (read aloud by screen readers)",
+      "caption": "Photo credit and license"
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "A 3D model section",
+      "paragraphs": [
+        "Text beside the model."
+      ],
+      "model": "DWA-Aotus1_Taxon",
+      "caption": "Caption under the model."
+    },
+    {
+      "type": "text",
+      "title": "Text only",
+      "paragraphs": [
+        "A section with no picture or model."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Would you like to know more?",
+      "text": "One line under the banner.",
+      "links": [
+        {
+          "label": "Link text",
+          "link": "aotus.html"
+        }
+      ]
+    }
+  ]
+}

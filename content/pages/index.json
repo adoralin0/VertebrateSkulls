@@ -1,0 +1,37 @@
+{
+  "_help": "The Home page. See EDITING_GUIDE.md for every section type.",
+  "header": "classic",
+  "menuHighlight": "Home",
+  "spacerAtTop": true,
+  "sections": [
+    {
+      "type": "model-table",
+      "rows": [
+        {
+          "models": [
+            {
+              "model": "Dog",
+              "width": 500,
+              "height": 300
+            },
+            {
+              "model": "Other",
+              "width": 500,
+              "height": 300
+            }
+          ],
+          "labels": [
+            "* <i>Canis familiaris</i> (Dog)",
+            "Another model"
+          ]
+        }
+      ],
+      "notes": [
+        "* Click on model to view endocranial base"
+      ]
+    },
+    {
+      "type": "spacer"
+    }
+  ]
+}

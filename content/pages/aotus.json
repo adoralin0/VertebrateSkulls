@@ -1,0 +1,65 @@
+{
+  "header": "standard",
+  "menuHighlight": "Primates",
+  "fonts": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Lato:wght@400;600&display=swap",
+  "heading": "<i>Aotus nancymaae</i>",
+  "sections": [
+    {
+      "type": "text-and-media",
+      "mediaSide": "right",
+      "paragraphs": [
+        "Hidden in the moonlit forests of Central and South America, <i>Aotus nancymaae</i> (also known as owl monkeys or night monkeys) are the only truly nocturnal monkeys in the world. Found from Panama down through the Amazon Basin into northern Argentina, these small primates have evolved to thrive in the shadows of the rainforest. Their oversized eyes, adapted for low light, give them an owlish look—and an edge in the dark.",
+        "Roughly the size of a kitten, night monkeys weigh just 1 to 2.5 pounds and live high in the tree canopy, navigating by stealth and sight rather than sound. Their home ranges vary by region but often include humid lowland and montane forests, where dense cover provides protection and plenty to eat.",
+        "Their diet is largely frugivorous (ripe fruits are their favorite), but they’ll also eat leaves, nectar, and insects, making them opportunistic feeders. Living in small, monogamous family groups, they’re known for strong pair bonds and devoted parenting. Both male and female share the work of raising a single infant at a time, with dads often carrying the baby between feedings."
+      ],
+      "image": "images/Aotus_photo.jpg",
+      "description": "Colorful, close-up photo of a family of Aotus nancymaae in a tree",
+      "caption": "Photo provided by iNaturalist user <i>Sieg</i> under CC4.0-BY-NC (<a href=\"https://www.inaturalist.org/photos/50511485\" target=\"_blank\">source</a>)"
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "The Distinctive Skull of <i>Aotus nancymaae</i>",
+      "paragraphs": [
+        "Owl monkeys (<i>Aotus</i>) have uniquely adapted skulls that reflect their nocturnal lifestyle. Their large, forward-facing orbits are among the largest relative to skull size of any monkey, maximizing light capture for night vision. The skull is short and rounded, with reduced bony ridges, reflecting their smaller jaw muscles compared to many other primates. This combination of traits—big eyes, small faces, and simplified chewing anatomy—makes the Aotus skull instantly recognizable and perfectly suited for life in the dark."
+      ],
+      "model": "DWA-Aotus1_Taxon",
+      "caption": "Skull of adult <i>Aotus nancymaae</i> (DWA-Aotus1)."
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "Juvenile <i>Aotus</i> Skull",
+      "paragraphs": [
+        "At three months of age, the extreme adaptation for large eyes already has remarkable influences on the skull. The eye sockets are already strikingly large. Expansion of the eyeballs has pressed the orbitosphenoid back against the alisphenoid, fusing those parts of the sphenoid together. In the lateral wall of the orbit, the parietal has been incorporated due to posterior expansion of this space. In the medial wall of the orbit, the ethmoid has been pressed against the vomer and has become fused. Other sutures are open, especially across the forehead and jaw, allowing for continued brain and facial growth. Compared to adults, juvenile skulls have a more domed cranium and a relatively short snout."
+      ],
+      "model": "Aotus107_Taxon",
+      "caption": "Skull of juvenile <i>Aotus nancymaae</i> (Aotus107)."
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "Newborn <i>Aotus</i> Skull",
+      "paragraphs": [
+        "A newborn Aotus skull is remarkably rounded with an oversized braincase and enormous orbits already adapted for seeing in the dark, even before the eyes fully open. The face is extremely short and flat, and the jaw is underdeveloped, suited for a milk-only diet. Many of the bones are still soft and unfused, with fontanelles and wide sutures allowing for rapid brain growth. The sheer size of the eye sockets at birth is a standout trait, reflecting the early importance of nocturnal vision in these tiny primates."
+      ],
+      "model": "Aotus108_Taxon",
+      "caption": "Skull of newborn <i>Aotus nancymaae</i> (Aotus108)."
+    },
+    {
+      "type": "callout",
+      "title": "Would you like to know more?",
+      "text": "Dive deeper into the science behind variation in the skull.",
+      "links": [
+        {
+          "label": "See how development of the teeth influences bone of the jaws in <em>Aotus</em>",
+          "link": "Aotus_Teeth.html"
+        },
+        {
+          "label": "Learn about the cranial bones in <em>Aotus</em>",
+          "link": "Aotus_Colors.html"
+        }
+      ]
+    }
+  ]
+}

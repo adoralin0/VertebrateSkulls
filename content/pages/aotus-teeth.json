@@ -1,0 +1,53 @@
+{
+  "header": "standard",
+  "menuHighlight": "Primates",
+  "fonts": "https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans:wght@400;600&display=swap",
+  "heading": "Teeth of <i>Aotus nancymaae</i>",
+  "sections": [
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "Teeth of Adult <i>Aotus nancymaae</i>",
+      "paragraphs": [
+        "The teeth of <i>Aotus</i> reflect their frugivorous (fruit-eating) diet. They have broad incisors and relatively small canines compared to other primates. Like all platyrrhines, they have three premolars, and their dental formula is 2-1-3-3/2-1-3-3."
+      ],
+      "model": "DWA-Aotus1_Teeth",
+      "caption": "Teeth of adult <i>Aotus nancymaae</i> (DWA-Aotus1)."
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "Juvenile <i>Aotus</i> Dentition",
+      "paragraphs": [
+        "At three months of age, [TEXT]"
+      ],
+      "model": "Aotus107_Teeth",
+      "caption": "Teeth of juvenile <i>Aotus nancymaae</i> (Aotus107)."
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "left",
+      "title": "Newborn <i>Aotus</i> Dentition",
+      "paragraphs": [
+        "At birth, the deciduous dentition (baby teeth) are just beginning to erupt."
+      ],
+      "model": "Aotus108_Teeth",
+      "caption": "Teeth of newborn <i>Aotus nancymaae</i> (Aotus108)."
+    },
+    {
+      "type": "callout",
+      "title": "Would you like to know more?",
+      "text": "Dive deeper into the science behind variation in the skull.",
+      "links": [
+        {
+          "label": "Return to the overview of the skull in <em>Aotus</em>",
+          "link": "aotus.html"
+        },
+        {
+          "label": "Learn about the cranial bones in <em>Aotus</em>",
+          "link": "Aotus_Colors.html"
+        }
+      ]
+    }
+  ]
+}

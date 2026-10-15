@@ -5,63 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>DeLeon Lab in UF Anthropology</title>
+    <script src="js/theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>DeLeon Lab at UF Anthropology
-        <div class="logo">
-            <img src="images/DeLeonLab_logo w text.png" align="right" alt="DeLeon Lab Logo">
-        </div></h1>
-        <h1>Vertebrate Skulls</h1>
-    </header>
-
-    <div class="container">
-        <nav class="navigation">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">Endocrania</a></li>
-                <li><a href="#">Sphenoids</a></li>
-                <li><a href="#">Primates</a>
-			 <ul class="submenu">
-     			   <li><a href="aotus.html">Aotus (Owl Monkeys)</a></li>
-     			   <li><a href="cebus.html">Cebus (Capuchins)</a></li>
-    			   <li><a href="macaca.html">Macaca (Macaques)</a></li>
-   			   <li><a href="pan.html">Pan (Chimpanzees)</a></li>
-      			   </ul>
-
-			</li>
-                <li><a href="#">Bats</a></li>
-                <li><a href="#">Nasal Capsules</a></li>
-            </ul>
-        </nav>
-
-
-        <div class="main-content">
-            &nbsp;
-
-<!-- Models are housed in a table, with a row of two models and a row of two labels, repeated. -->
-<!-- Adding new models requires adding iframes with new "id" attributes that call to names in script.js. -->
-            
-        <table border="0">
-        <tr>
-            <td><iframe class="sketchfab" id="api-frame-dog" width="500" height="300"></iframe></td>
-            <td><iframe class="sketchfab" id="api-frame-other" width="500" height="300"></iframe></td>
-        </tr>
-        <tr>
-            <td>* <i>Canis familiaris</i> (Dog)</td>
-            <td>Another model</td>
-        </tr>
-        <tr>
-            <td>* Click on model to view endocranial base</td>
-        </tr>
-        </table>
-         <p>&nbsp;</p>
-  
-            <!-- Add more iframes or content as needed -->
-        </div>
-    </div>
-
-    <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
-    <script src="js/script.js"></script>
+<!-- This page is built from content/pages/index.json. Edit that file, not this one. -->
+<body data-page="index">
+    <noscript><p style="padding:20px">This site needs JavaScript turned on to show its pages and 3D models.</p></noscript>
+    <script src="js/site.js"></script>
 </body>
 </html>

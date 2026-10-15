@@ -1,0 +1,56 @@
+{
+  "_help": "Every 3D model on the site, by name. Pages refer to these names. To switch a model between viewers, change \"viewer\" to \"voyager\" or \"sketchfab\". See EDITING_GUIDE.md.",
+
+  "DWA-Aotus1_Taxon": {
+    "viewer": "voyager",
+    "voyager": { "folder": "models/DWA-Aotus1_Taxon/", "click": "toggle" },
+    "sketchfab": { "id": "53e9657729b34a269111b30933d42d94", "clickParts": ["Calotte"], "click": "toggle",
+                   "options": { "ui_stop": 0, "preload": 1, "camera": 0 } }
+  },
+  "Aotus107_Taxon": {
+    "viewer": "voyager",
+    "voyager": { "folder": "models/Aotus107_Taxon/", "click": "toggle" },
+    "sketchfab": { "id": "e8bcd539e0594f46a96d54da6ea6d99a", "clickParts": ["Calotte"], "click": "toggle",
+                   "options": { "ui_stop": 0, "preload": 1, "camera": 0 } }
+  },
+  "Aotus108_Taxon": {
+    "viewer": "voyager",
+    "voyager": { "folder": "models/Aotus108_Taxon/", "click": "toggle" },
+    "sketchfab": { "id": "d4e239842d2d45e89ece58016578e4d7", "clickParts": ["Calotte"], "click": "toggle",
+                   "options": { "ui_stop": 0, "preload": 1, "camera": 0 } }
+  },
+
+  "DWA-Aotus1_Teeth": {
+    "viewer": "voyager",
+    "voyager": { "folder": "models/DWA-Aotus1_Teeth/", "click": "cycle" },
+    "sketchfab": { "id": "6920446710f64de3a6621ac766255d16", "click": "cycle",
+                   "clickParts": ["Mandible_forTeeth", "Mandible", "Maxilla", "Maxilla_forTeeth"],
+                   "options": { "preload": 0, "graph_optimizer": 0, "ui_stop": 0, "camera": 0, "ui_infos": 0, "ui_controls": 0 } }
+  },
+  "Aotus107_Teeth": {
+    "viewer": "voyager",
+    "voyager": { "folder": "models/Aotus107_Teeth/", "click": "cycle" },
+    "sketchfab": { "id": "9fb6cf5aac834deeac18c92e50cf9259", "click": "cycle",
+                   "clickParts": ["Mandible_forTeeth", "Mandible", "Maxilla", "Maxilla_forTeeth"],
+                   "options": { "preload": 0, "graph_optimizer": 0, "ui_stop": 0, "camera": 0, "ui_infos": 0, "ui_controls": 0 } }
+  },
+  "Aotus108_Teeth": {
+    "viewer": "voyager",
+    "voyager": { "folder": "models/Aotus108_Teeth/", "click": "cycle" },
+    "sketchfab": { "id": "f5696596b5bc4338ba1b21a49ee1955e", "click": "cycle",
+                   "clickParts": ["Mandible_forTeeth", "Mandible", "Maxilla", "Maxilla_forTeeth"],
+                   "options": { "preload": 0, "graph_optimizer": 0, "ui_stop": 0, "camera": 0, "ui_infos": 0, "ui_controls": 0 } }
+  },
+
+  "Dog": {
+    "_note": "Not in the SkeletalGrowth database yet, so it stays on Sketchfab until a .glb is available.",
+    "viewer": "sketchfab",
+    "sketchfab": { "id": "271bd5c6d9854fe6997f8a31475e9d2c", "clickParts": ["Calotte_v6_2"], "click": "toggle",
+                   "options": { "ui_stop": 0, "preload": 1, "camera": 0 } }
+  },
+  "Other": {
+    "viewer": "sketchfab",
+    "sketchfab": { "id": "423318aa8fd14782976d528fd8e2a5d0",
+                   "options": { "ui_stop": 0, "preload": 1, "camera": 0 } }
+  }
+}

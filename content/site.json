@@ -1,0 +1,44 @@
+{
+  "_help": "Site-wide settings. Every page shares the header, menu and theme below. See EDITING_GUIDE.md.",
+
+  "browserTitle": "DeLeon Lab in UF Anthropology",
+  "siteTitle": "DeLeon Lab at UF Anthropology",
+  "siteSubtitle": "Vertebrate Skulls",
+  "logo": { "image": "images/DeLeonLab_logo w text.png", "description": "DeLeon Lab Logo" },
+
+  "theme": {
+    "_help": "default: dark, light, or system (follows the visitor's device setting). showSwitch adds the Light/Dark button under the menu.",
+    "default": "dark",
+    "showSwitch": true
+  },
+
+  "viewers": {
+    "_help": "Shared 3D viewer settings. Each model picks its viewer in models.json.",
+    "voyager": {
+      "script": "https://3d-api.si.edu/resources/js/voyager-explorer.min.js",
+      "buttons": "menu|help|reset",
+      "backgroundDark": "#111111",
+      "backgroundLight": "#f0efeb",
+      "loadWhenVisible": true
+    },
+    "sketchfab": {
+      "script": "https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js",
+      "version": "1.12.1",
+      "loadWhenVisible": true
+    }
+  },
+
+  "menu": [
+    { "label": "Home", "link": "index.html" },
+    { "label": "Endocrania", "link": "#" },
+    { "label": "Sphenoids", "link": "#" },
+    { "label": "Primates", "link": "primates.html", "submenu": [
+      { "label": "Aotus (Owl Monkeys)", "link": "aotus.html" },
+      { "label": "Cebus (Capuchins)", "link": "cebus.html" },
+      { "label": "Macaca (Macaques)", "link": "macaca.html" },
+      { "label": "Pan (Chimpanzees)", "link": "pan.html" }
+    ]},
+    { "label": "Bats", "link": "#" },
+    { "label": "Nasal Capsules", "link": "#" }
+  ]
+}

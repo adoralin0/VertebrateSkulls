@@ -1,0 +1,56 @@
+{
+  "header": "classic",
+  "menuHighlight": "Primates",
+  "spacerAtTop": true,
+  "extraWrapper": true,
+  "heading": "<i>Aotus nancymaae</i>",
+  "sections": [
+    {
+      "type": "text-and-media",
+      "mediaSide": "right",
+      "title": "Meet the Night Monkeys (Genus <i>Aotus</i>)",
+      "paragraphs": [
+        "Hidden in the moonlit forests of Central and South America, the night monkeys—also known as Aotus or owl monkeys—are the only truly nocturnal monkeys in the world. Found from Panama down through the Amazon Basin into northern Argentina, these small primates have evolved to thrive in the shadows of the rainforest. Their oversized eyes, adapted for low light, give them an owlish look—and an edge in the dark.",
+        "Roughly the size of a kitten, night monkeys weigh just 1 to 2.5 pounds and live high in the canopy, navigating by stealth and sight rather than sound. Their home ranges vary by region but often include humid lowland and montane forests, where dense cover provides protection and plenty to eat.",
+        "Their diet is largely frugivorous—ripe fruits are their favorite—but they’ll also munch on leaves, nectar, and insects, making them opportunistic feeders. Living in small, monogamous family groups, they’re known for strong pair bonds and devoted parenting. Both male and female share the work of raising a single infant at a time, with dads often carrying the baby between feedings."
+      ],
+      "image": "images/Aotus_photo.jpg",
+      "description": "Colorful, close-up photo of a family of Aotus nancymaae in a tree",
+      "caption": "Photo provided by iNaturalist user <i>Sieg</i> under CC4.0-BY-NC (<a href=\"https://www.inaturalist.org/photos/50511485\" target=\"_blank\">source</a>)"
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "right",
+      "title": "The Distinctive Skull of <i>Aotus nancymaae</i>",
+      "paragraphs": [
+        "Night monkeys (<i>Aotus</i>) have uniquely adapted skulls that reflect their nocturnal lifestyle. Their large, forward-facing orbits are among the largest relative to skull size of any monkey, maximizing light capture for night vision. The skull is short and rounded, with reduced bony ridges, reflecting their smaller jaw muscles compared to diurnal primates. This combination of traits—big eyes, small faces, and simplified chewing anatomy—makes the Aotus skull instantly recognizable and perfectly suited for life in the dark."
+      ],
+      "model": "DWA-Aotus1_Taxon",
+      "caption": "Skull of adult <i>Aotus nancymaae</i> (DWA-Aotus1)."
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "right",
+      "title": "First Component",
+      "bigTitle": true,
+      "paragraphs": [
+        "This is a text block beside the iframe."
+      ],
+      "embed": "https://example.com",
+      "embedTitle": "Example iframe",
+      "caption": "Example iframe caption"
+    },
+    {
+      "type": "text-and-media",
+      "mediaSide": "right",
+      "title": "First Component",
+      "bigTitle": true,
+      "paragraphs": [
+        "This is a text block beside the iframe."
+      ],
+      "embed": "https://example.com",
+      "embedTitle": "Example iframe",
+      "caption": "Example iframe caption"
+    }
+  ]
+}
