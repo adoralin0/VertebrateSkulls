@@ -229,7 +229,7 @@ def write_scene(outdir, groups, click=None, fade=None, title=''):
             "navigation": {"type": "Orbit", "enabled": True, "autoZoom": True, "lightsFollowCamera": True,
                            "autoRotation": False,
                            "orbit": {"orbit": [-25, -25, 0], "offset": [0, 0, 150],
-                                     "minOrbit": [-90, None, None], "maxOrbit": [90, None, None],
+                                     "minOrbit": [None, None, None], "maxOrbit": [None, None, None],
                                      "minOffset": [None, None, 0.1], "maxOffset": [None, None, 10000]}},
             "background": {"style": "Solid", "color0": [0.07, 0.07, 0.07], "color1": [0, 0, 0]},
             "floor": {"visible": False, "position": [0, -25, 0], "size": 50, "color": [0.6, 0.75, 0.8],
