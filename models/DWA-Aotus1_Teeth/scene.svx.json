@@ -85,25 +85,28 @@
   ],
   "lights": [
     {
+      "enabled": true,
       "color": [
         1,
-        0.95,
-        0.9
+        0.97,
+        0.92
       ],
-      "intensity": 1,
+      "intensity": 0.35,
       "type": "directional"
     },
     {
+      "enabled": true,
       "color": [
         0.9,
         0.95,
         1
       ],
-      "intensity": 0.6,
+      "intensity": 0.15,
       "type": "directional"
     },
     {
-      "intensity": 1,
+      "enabled": true,
+      "intensity": 0.7,
       "type": "environment"
     }
   ],
@@ -181,8 +184,8 @@
       },
       "viewer": {
         "shader": "Default",
-        "toneMapping": false,
-        "exposure": 1,
+        "toneMapping": true,
+        "exposure": 0.9,
         "gamma": 2,
         "annotationsVisible": false,
         "activeTags": "show"
