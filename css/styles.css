@@ -200,7 +200,6 @@ header {
   min-width: 0;                  /* 🔑 allows flex children to shrink */
   padding: 20px;
   box-sizing: border-box;
-  overflow-y: auto;
   background-color: var(--page-bg);
 }
 
